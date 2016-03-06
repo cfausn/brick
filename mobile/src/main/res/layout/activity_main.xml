@@ -9,18 +9,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.rit.sse.brickhack.MainActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sprite"
+        android:layout_gravity="center"
+        android:src="@mipmap/sprite_egg_form1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sprite"
-            android:layout_gravity="center"
-            android:src="@mipmap/sprite_egg_form1" />
-    </FrameLayout>
+    <ImageView
+        android:layout_width="252dp"
+        android:layout_height="252dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="left|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evolved to Carter!"
+        android:id="@+id/evolvedText"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/sprite"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
