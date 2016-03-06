@@ -1,4 +1,4 @@
-package java.edu.rit.sse.brickhack;
+package edu.rit.sse.brickhack;
 
 /**
  * Created by Melissa Laskowski on 3/5/2016.

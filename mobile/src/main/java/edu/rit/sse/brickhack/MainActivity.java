@@ -3,6 +3,7 @@
 //k-here
 package main.java.edu.rit.sse.brickhack;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
+
+import edu.rit.sse.brickhack.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
                 if(timer == 30){
                     evolve = true;
-                    carter();
                 }
 
                 if(change){
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         sprite.postDelayed(r, 2000);
+        carter();
 
 
 
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void carter(){
         text.setText("Evolved to Carter!");
+
         sprite.setImageResource(R.mipmap.sprite_starter_carter1);
         evolve = false;
         timer = 0;
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
 
                 //one hour by default
-                if (timer == 1200000) firstForm();
+                if (timer == 1200000) evolve = true;
 
                 if(change){
                     sprite.setImageResource(R.mipmap.sprite_starter_carter1);
@@ -98,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
         sprite.postDelayed(r, 3000);
+
+        firstForm();
 
 
     }
