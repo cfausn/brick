@@ -36,9 +36,16 @@ public class MainActivity extends AppCompatActivity {
         text = (TextView)findViewById(R.id.evolvedText);
         evolve = false;
         change = true;
+        timer = 0;
 
         Runnable r = new Runnable(){
             public void run(){
+
+                if(timer == 30){
+                    evolve = true;
+                    carter();
+                }
+
                 if(change){
                     sprite.setImageResource(R.mipmap.sprite_egg_form1);
                     change = false;
@@ -57,13 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
         sprite.postDelayed(r, 2000);
 
-        if(timer == 30) carter();
 
 
     }
 
     public void carter(){
-        evolve = true;
         text.setText("Evolved to Carter!");
         sprite.setImageResource(R.mipmap.sprite_starter_carter1);
         evolve = false;
@@ -72,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
         Runnable r = new Runnable() {
             @Override
             public void run() {
+
+                //one hour by default
+                if (timer == 1200000) firstForm();
+
                 if(change){
                     sprite.setImageResource(R.mipmap.sprite_starter_carter1);
                     change = false;
@@ -90,8 +99,6 @@ public class MainActivity extends AppCompatActivity {
 
         sprite.postDelayed(r, 3000);
 
-        //one hour by default
-        if (timer == 1200000) firstForm();
 
     }
 
