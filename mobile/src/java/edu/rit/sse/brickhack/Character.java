@@ -54,7 +54,7 @@ public abstract class Character {
     }
     /**
      * calculates the correct stat and returns it
-     * @return
+     * @return an int between 1-10 of the calculated average of all the stats
      */
     public int getGeneral_stat() {
 
