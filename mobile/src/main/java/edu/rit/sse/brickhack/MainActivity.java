@@ -1,7 +1,7 @@
 // List Packages here:
 //sup
 //k-here
-package edu.rit.sse.brickhack;
+package main.java.edu.rit.sse.brickhack;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
